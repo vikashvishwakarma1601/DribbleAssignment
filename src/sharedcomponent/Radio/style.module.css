@@ -1,0 +1,47 @@
+.form_group{
+    margin: 0;
+}
+
+.form_group label{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    border: 1px solid #80808036;
+    border-radius: 5px;
+}
+
+.form_group input[type="radio"]:checked + label{
+    border: 1px solid #5030c1;
+}
+
+.form_group input[type="radio"]:checked + label i{
+    color: #5030c1;
+}
+
+.form_group i{
+    font-size: 22px;
+}
+
+.textContent{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.title{
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+}
+
+.desc{
+    line-height: 1.5;
+    color: #979797;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+}
+
+.form_group input[type="radio"]{
+    display: none;
+}
+

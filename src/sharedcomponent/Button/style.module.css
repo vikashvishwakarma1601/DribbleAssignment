@@ -1,0 +1,22 @@
+.btn{
+    width: 100%;
+    height: 45px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    margin: 20px 0;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.primary{
+    color: #fff;
+    background-color: #5030c1;
+}
+
+.primary:hover{
+    background-color: #3c0af3;
+}

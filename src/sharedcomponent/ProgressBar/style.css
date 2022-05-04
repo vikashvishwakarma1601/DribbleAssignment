@@ -1,0 +1,40 @@
+.progressWrapper{
+    width: 300px;
+    position: relative;
+    margin: 100px auto;
+}
+
+.progressLine{
+    width: 100%;
+    height: 2px;
+    background-color: #e3e3e3;
+}
+
+.progressLine .lineFiller{
+    /* width: 50%; */
+    height: 100%;
+    display: inline-block;
+    position: absolute;
+    background-color: #5030c1;
+}
+
+.steps{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: -15px;
+}
+
+.step{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #5030c1;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+}
