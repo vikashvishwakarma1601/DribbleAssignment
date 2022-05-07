@@ -5,16 +5,15 @@
     border: none;
     border-radius: 5px;
     margin: 20px 0;
-    font-size: 14px;
-    font-family: 'Inter', sans-serif;
+    font-size: 1em;
     letter-spacing: 0.5px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 }
 
 .primary{
-    color: #fff;
-    background-color: #5030c1;
+    color: #e4e4e4;
+    background-color: #7d5bf3;
 }
 
 .primary:hover{

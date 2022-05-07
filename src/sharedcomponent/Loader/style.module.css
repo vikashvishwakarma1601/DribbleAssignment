@@ -1,0 +1,44 @@
+.loader{
+    width: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.box {
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    opacity: 0.6;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .color_8a2be2 {
+    background-color: #8a2be2;
+  }
+  
+  .color_2b96e2 {
+    background-color: #2b96e2;
+  }
+  
+  .color_2be26c {
+    background-color: #2be26c;
+  }
+  
+  .color_e2bb2b {
+    background-color: #e2bb2b;
+  }
+  .color_546e7a {
+    background-color: #546e7a;
+  }
+
+  .active{
+    transform: scale(1.4);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  }

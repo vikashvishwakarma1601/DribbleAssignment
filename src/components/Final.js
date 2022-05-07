@@ -1,11 +1,10 @@
-import react from "react";
 import Button from "../sharedcomponent/Button";
 
-export default function FinalScreen() {
+export default function Final() {
   return (
     <>
       <div className="textWrapper">
-        <div className="checkIcon">
+        <div className="congrats_icon">
           <i class="fa fa-check" aria-hidden="true"></i>
         </div>
         <div className="textBox">

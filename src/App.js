@@ -1,31 +1,45 @@
+import { useReducer, Suspense } from "react";
 import icon from "./icon.png";
-import "./App.css";
-import React, { useState } from "react";
-import FirstScreen from "./components/FirstScreen";
-import SecondScreen from "./components/SecondScreen";
-import ThirdScreen from "./components/ThirdScreen";
-import FinalScreen from "./components/FinalScreen";
+import "./globalStyle.css";
 import "font-awesome/css/font-awesome.min.css";
 import ProgressBar from "./sharedcomponent/ProgressBar";
+import Loader from "./sharedcomponent/Loader";
+import { initialState, reducer } from "./reducer";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import {
+  PersonalInfo,
+  WorkspaceInfo,
+  WorkspaceTypeInfo,
+  Final,
+} from "./componentIndex.js";
+
 
 function App() {
-  const [step, setStep] = useState(1);
-  const Components = {
-    1 : <FirstScreen setStep={setStep}/>,
-    2 : <SecondScreen setStep={setStep}/>,
-    3 : <ThirdScreen setStep={setStep}/>,
-    4 : <FinalScreen />,
-  }
+  const [state, dispatch] = useReducer(reducer, initialState);
+
+  const renderComponent = () => {
+    let step = state.step;
+    if (step == 1) return <PersonalInfo dispatch={dispatch} />;
+    else if (step == 2) return <WorkspaceInfo dispatch={dispatch} />;
+    else if (step == 3) return <WorkspaceTypeInfo dispatch={dispatch} />;
+    else if (step == 4) return <Final dispatch={dispatch} />;
+  };
 
   return (
-    <div className="container">
-      <div className="head">
-        <img clasname="logo" src={icon}></img>
-        <h1>Eden</h1>
-      </div>
-      <ProgressBar step={step} totalStep = {4}/>
-      {Components[step]}
-    </div>
+    <>
+      <main>
+        <div className="head">
+          <img clasname="logo" src={icon}></img>
+          <h1>Eden</h1>
+        </div>
+        <ProgressBar step={state.step} totalCounter={state.totalStep} />
+        <div className="container">
+          <Suspense fallback={<Loader />}>{renderComponent()}</Suspense>
+        </div>
+      </main>
+      <ToastContainer />
+    </>
   );
 }
 

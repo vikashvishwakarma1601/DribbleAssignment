@@ -8,14 +8,13 @@
 }
 
 .form_group label{
-    font-size: 14px;
-    font-weight: 500;
-    color: #363636;
-    font-family: 'Inter', sans-serif;
+    font-size: 0.8em;
+    font-weight: 600;
+    color: #555555;
 }
 
 .form_group label .optional{
-    font-size: 12px;
+    font-size: 0.8em;
     color: #b1b0b0;
 }
 
@@ -26,7 +25,6 @@
     border-radius: 5px;
     outline: 0;
     padding: 10px;
-    font-family: 'Inter', sans-serif;
     box-sizing: border-box;
 }
 
